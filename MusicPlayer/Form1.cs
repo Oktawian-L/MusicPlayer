@@ -21,7 +21,7 @@ namespace MusicPlayer
         //Play button
         private void button1_Click(object sender, EventArgs e)
         {
-            MediaPlayer.Ctlcontrols.play();
+             MediaPlayer.Ctlcontrols.play();
         }
         //Browse button
         private void button3_Click(object sender, EventArgs e)
