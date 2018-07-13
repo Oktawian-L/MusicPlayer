@@ -12,9 +12,37 @@ namespace MusicPlayer
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
+            MediaPlayer.URL = "C:\\Users\\Optimus\\Desktop\\PULPIT\\Muzyka";
+        }
+        //Play button
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MediaPlayer.Ctlcontrols.play();
+        }
+        //Browse button
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Text = openFileDialog1.FileName;
+            }
+            MediaPlayer.URL = textBox1.Text;
+
+        }
+        //Pause button
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MediaPlayer.Ctlcontrols.pause();
+        }
+        //Exit button
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
